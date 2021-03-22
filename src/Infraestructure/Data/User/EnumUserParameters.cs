@@ -36,14 +36,20 @@ namespace Application.Data
         [Description("@@ModifiedBy")]
         MODIFIED_BY,
 
-        [Description("@@UserName")]
-        USER_NAME,
+        [Description("@@Email")]
+        EMAIL,
 
         [Description("@@Password")]
         PASSWORD,
 
         [Description("@@State")]
-        STATE
+        STATE,
+
+        [Description("@@IdentificationType")]
+        IDENTIFICATION_TYPE,
+
+        [Description("@@Identification")]
+        IDENTIFICATION
     }
 }
 

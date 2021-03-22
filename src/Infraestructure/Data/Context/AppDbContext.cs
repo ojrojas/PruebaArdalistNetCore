@@ -11,7 +11,8 @@ namespace Application.Data
     /// <date>20/03/2021</date>
     public class AppDbContext : DbContext
     {
-        public DbSet<User> Users{ get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<TypeIdentification> TypeIdentifications { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

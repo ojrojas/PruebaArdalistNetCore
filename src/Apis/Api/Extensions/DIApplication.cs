@@ -28,6 +28,9 @@ namespace Application.Api.Extensions
             services.AddScoped<IUserBusinessLogic, UserBusinessLogic>();
             services.AddScoped<IUserRepository, UserRepository>();
 
+            services.AddScoped<ITypeIdentificationRepository, TypeIdentificationRepository>();
+            services.AddScoped<IIdentificationTypeBusinessLogic, IdentificationTypeBusinessLogic>();
+
             return services;
         }
     }

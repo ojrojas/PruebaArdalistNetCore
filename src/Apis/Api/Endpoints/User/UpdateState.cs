@@ -21,7 +21,7 @@ namespace Api.Endpoints.User
             _userBusinessLogic = userBusinessLogic;
         }
 
-        [HttpPatch("api/user")]
+        [HttpPatch("api/users")]
         [Consumes("application/json")]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
         [SwaggerOperation(

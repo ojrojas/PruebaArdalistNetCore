@@ -31,17 +31,19 @@ namespace Application.Repositories
         public async Task<User> CreateUser(User user)
         {
             DynamicParameters parameters = new DynamicParameters();
-            parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.ID), user.Id);
+            parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.ID), Guid.NewGuid());
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.NAME), user.Name);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.MIDDLE_NAME), user.MiddleName);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.LAST_NAME), user.LastName);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.SUR_NAME), user.SurName);
-            parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.USER_NAME), user.UserName);
+            parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.EMAIL), user.Email);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.PASSWORD), user.Password);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.MODIFIED_BY), user.ModifiedBy);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.MODIFIED_ON), user.ModifiedOn);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.CREATED_BY), user.CreatedBy);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.CREATED_ON), user.CreatedOn);
+            parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.IDENTIFICATION_TYPE), user.IdentificationType);
+            parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.IDENTIFICATION), user.Identification);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.STATE), user.State);
 
             return await GetAsyncFirst<User>(UserQuerys.CreateUser, parameters, CommandType.Text);
@@ -62,8 +64,10 @@ namespace Application.Repositories
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.MIDDLE_NAME), user.MiddleName);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.LAST_NAME), user.LastName);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.SUR_NAME), user.SurName);
-            parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.USER_NAME), user.UserName);
+            parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.EMAIL), user.Email);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.PASSWORD), user.Password);
+            parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.IDENTIFICATION_TYPE), user.IdentificationType);
+            parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.IDENTIFICATION), user.Identification);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.STATE), user.State);
 
             return await GetAsyncFirst<User>(UserQuerys.UpdateUser, parameters, CommandType.Text);
@@ -110,7 +114,7 @@ namespace Application.Repositories
         public async Task<User> SelectLoginUser(User user)
         {
             DynamicParameters parameters = new DynamicParameters();
-            parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.USER_NAME), user.UserName);
+            parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.EMAIL), user.Email);
             parameters.Add(HelpersEnums.GetEnumDescription(EnumUserParameters.PASSWORD), user.Password);
 
             return await GetAsyncFirst<User>(UserQuerys.SelectLoginUser, parameters, CommandType.Text);

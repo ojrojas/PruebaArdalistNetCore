@@ -21,7 +21,7 @@ namespace Api.Endpoints.User
             _userBusinessLogic = userBusinessLogic;
         }
 
-        [HttpDelete("api/user")]
+        [HttpDelete("api/users")]
         [Consumes("application/json")]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
         [SwaggerOperation(

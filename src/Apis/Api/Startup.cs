@@ -48,7 +48,7 @@ namespace Application.Api
             services.AddSwaggerGenDoc();
             /// Add Injections Services Application
             services.AddServiceInjection();
-            services.AddAutoMapper(typeof(UserMappersProfile));
+            services.AddAutoMapper(typeof(UserMappersProfile), typeof(TypeIdentificationMappers));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
