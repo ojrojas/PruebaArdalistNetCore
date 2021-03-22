@@ -1,0 +1,14 @@
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\bin\Debug\netstandard2.1\Data.deps.json
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\bin\Debug\netstandard2.1\Data.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\bin\Debug\netstandard2.1\Data.pdb
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\bin\Debug\netstandard2.1\Commons.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\bin\Debug\netstandard2.1\Entities.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\bin\Debug\netstandard2.1\Entities.pdb
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\bin\Debug\netstandard2.1\Commons.pdb
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\obj\Debug\netstandard2.1\Data.csprojAssemblyReference.cache
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\obj\Debug\netstandard2.1\Data.AssemblyInfoInputs.cache
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\obj\Debug\netstandard2.1\Data.AssemblyInfo.cs
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\obj\Debug\netstandard2.1\Data.csproj.CoreCompileInputs.cache
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\obj\Debug\netstandard2.1\Data.csproj.CopyComplete
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\obj\Debug\netstandard2.1\Data.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Data\obj\Debug\netstandard2.1\Data.pdb

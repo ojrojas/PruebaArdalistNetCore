@@ -1,0 +1,715 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Apis\\Api\\Api.csproj": {}
+  },
+  "projects": {
+    "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Apis\\Api\\Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Apis\\Api\\Api.csproj",
+        "projectName": "Api",
+        "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Apis\\Api\\Api.csproj",
+        "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
+        "outputPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Apis\\Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\oroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Dtos\\Dtos.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Dtos\\Dtos.csproj"
+              },
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Main\\Main.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Main\\Main.csproj"
+              },
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Core\\Core.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Core\\Core.csproj"
+              },
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Data\\Data.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Data\\Data.csproj"
+              },
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Commons\\Commons.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Commons\\Commons.csproj"
+              },
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Mappers\\Mappers.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Mappers\\Mappers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Ardalis.ApiEndpoints": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Dtos\\Dtos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Dtos\\Dtos.csproj",
+        "projectName": "Dtos",
+        "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Dtos\\Dtos.csproj",
+        "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
+        "outputPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Dtos\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\oroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Commons\\Commons.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Commons\\Commons.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Main\\Main.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Main\\Main.csproj",
+        "projectName": "Main",
+        "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Main\\Main.csproj",
+        "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
+        "outputPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Main\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\oroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Dtos\\Dtos.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Dtos\\Dtos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Core\\Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
+        "outputPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\oroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Dtos\\Dtos.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Dtos\\Dtos.csproj"
+              },
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Main\\Main.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Main\\Main.csproj"
+              },
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Entities\\Entities.csproj"
+              },
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Repositories\\Repositories.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Repositories\\Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
+        "outputPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\oroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Commons\\Commons.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Commons\\Commons.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Data\\Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Data\\Data.csproj",
+        "projectName": "Data",
+        "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
+        "outputPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\oroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Repositories\\Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Repositories\\Repositories.csproj",
+        "projectName": "Repositories",
+        "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
+        "outputPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Repositories\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\oroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Entities\\Entities.csproj"
+              },
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Data\\Data.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Infraestructure\\Data\\Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Commons\\Commons.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Commons\\Commons.csproj",
+        "projectName": "Commons",
+        "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Commons\\Commons.csproj",
+        "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
+        "outputPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Commons\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\oroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Mappers\\Mappers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Mappers\\Mappers.csproj",
+        "projectName": "Mappers",
+        "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Mappers\\Mappers.csproj",
+        "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
+        "outputPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Transversals\\Mappers\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\oroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Dtos\\Dtos.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Application\\Dtos\\Dtos.csproj"
+              },
+              "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

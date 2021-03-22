@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "89Q0YQ6y5hxaYAQc48SK4M5tr95d52SePH9iit95CkWGZOxEnLTlyjTHYfGvxKUGdmuKgOq+56qI0Em0RfAKjA==",
+  "success": true,
+  "projectFilePath": "D:\\Source\\ojrojas\\Pruebas\\PruebaCarvajal\\Application\\src\\Domain\\Entities\\Entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oroja\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

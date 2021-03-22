@@ -1,0 +1,12 @@
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Application\Dtos\bin\Debug\netstandard2.1\Dtos.deps.json
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Application\Dtos\bin\Debug\netstandard2.1\Dtos.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Application\Dtos\bin\Debug\netstandard2.1\Dtos.pdb
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Application\Dtos\bin\Debug\netstandard2.1\Commons.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Application\Dtos\bin\Debug\netstandard2.1\Commons.pdb
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Application\Dtos\obj\Debug\netstandard2.1\Dtos.csprojAssemblyReference.cache
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Application\Dtos\obj\Debug\netstandard2.1\Dtos.AssemblyInfoInputs.cache
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Application\Dtos\obj\Debug\netstandard2.1\Dtos.AssemblyInfo.cs
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Application\Dtos\obj\Debug\netstandard2.1\Dtos.csproj.CoreCompileInputs.cache
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Application\Dtos\obj\Debug\netstandard2.1\Dtos.csproj.CopyComplete
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Application\Dtos\obj\Debug\netstandard2.1\Dtos.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Application\Dtos\obj\Debug\netstandard2.1\Dtos.pdb

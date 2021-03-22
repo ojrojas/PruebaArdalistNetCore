@@ -1,0 +1,16 @@
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\bin\Debug\netstandard2.1\Repositories.deps.json
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\bin\Debug\netstandard2.1\Repositories.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\bin\Debug\netstandard2.1\Repositories.pdb
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\bin\Debug\netstandard2.1\Commons.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\bin\Debug\netstandard2.1\Data.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\bin\Debug\netstandard2.1\Entities.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\bin\Debug\netstandard2.1\Entities.pdb
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\bin\Debug\netstandard2.1\Data.pdb
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\bin\Debug\netstandard2.1\Commons.pdb
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\obj\Debug\netstandard2.1\Repositories.csprojAssemblyReference.cache
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\obj\Debug\netstandard2.1\Repositories.AssemblyInfoInputs.cache
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\obj\Debug\netstandard2.1\Repositories.AssemblyInfo.cs
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\obj\Debug\netstandard2.1\Repositories.csproj.CoreCompileInputs.cache
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\obj\Debug\netstandard2.1\Repositories.csproj.CopyComplete
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\obj\Debug\netstandard2.1\Repositories.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Infraestructure\Repositories\obj\Debug\netstandard2.1\Repositories.pdb

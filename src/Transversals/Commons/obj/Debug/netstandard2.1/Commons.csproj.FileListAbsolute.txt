@@ -1,0 +1,9 @@
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Transversals\Commons\bin\Debug\netstandard2.1\Commons.deps.json
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Transversals\Commons\bin\Debug\netstandard2.1\Commons.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Transversals\Commons\bin\Debug\netstandard2.1\Commons.pdb
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Transversals\Commons\obj\Debug\netstandard2.1\Commons.csprojAssemblyReference.cache
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Transversals\Commons\obj\Debug\netstandard2.1\Commons.AssemblyInfoInputs.cache
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Transversals\Commons\obj\Debug\netstandard2.1\Commons.AssemblyInfo.cs
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Transversals\Commons\obj\Debug\netstandard2.1\Commons.csproj.CoreCompileInputs.cache
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Transversals\Commons\obj\Debug\netstandard2.1\Commons.dll
+D:\Source\ojrojas\Pruebas\PruebaCarvajal\Application\src\Transversals\Commons\obj\Debug\netstandard2.1\Commons.pdb
