@@ -3,7 +3,6 @@ using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Threading.Tasks;
 
 namespace Application.Repositories
@@ -16,7 +15,7 @@ namespace Application.Repositories
     public abstract class GenerycRepository
     {
         private readonly IConfiguration _configuration;
-
+       
         /// <summary>
         /// Contructor GeneryRepository 
         /// </summary>

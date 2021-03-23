@@ -12,16 +12,35 @@ using System.Threading.Tasks;
 
 namespace Api.Endpoints.TypeIdentification
 {
+    /// <summary>
+    /// Endpoint getall type identifications
+    /// </summary>
+    /// <author>Oscar Julian Rojas</author>
+    /// <date>21/03/2021</date>
     [Authorize]
     public class GetAll : BaseAsyncEndpoint.WithoutRequest.WithResponse<Response<IEnumerable<TypeIdentificationDto>>>
     {
+        /// <summary>
+        /// property type identification business logic
+        /// </summary>
+        /// <author>Oscar Julian Rojas</author>
+        /// <date>21/03/2021</date>
         private readonly IIdentificationTypeBusinessLogic _identificationTypeBusinessLogic;
 
+        /// <summary>
+        /// Constructor injection business logic type identification
+        /// </summary>
+        /// <param name="identificationTypeBusinessLogic">property typeidentification</param>
         public GetAll(IIdentificationTypeBusinessLogic identificationTypeBusinessLogic)
         {
             _identificationTypeBusinessLogic = identificationTypeBusinessLogic;
         }
 
+        /// <summary>
+        /// Getall endpoint
+        /// </summary>
+        /// <param name="cancellationToken">Cancelation</param>
+        /// <returns>IEnumerable type identifications</returns>
         [HttpGet("api/typeidentifications")]
         [Consumes("application/json")]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]

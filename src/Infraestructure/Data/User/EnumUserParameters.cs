@@ -45,7 +45,7 @@ namespace Application.Data
         [Description("@@State")]
         STATE,
 
-        [Description("@@IdentificationType")]
+        [Description("@@TypeIdentificationId")]
         IDENTIFICATION_TYPE,
 
         [Description("@@Identification")]

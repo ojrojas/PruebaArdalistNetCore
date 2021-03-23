@@ -11,16 +11,37 @@ using System.Threading.Tasks;
 
 namespace Api.Endpoints.User
 {
+    /// <summary>
+    /// Update endpoint users
+    /// </summary>
+    /// <author>Oscar Julian Rojas</author>
     [Authorize]
     public class Update : BaseAsyncEndpoint.WithRequest<UserDto>.WithResponse<Response<UserDto>>
     {
+        /// <summary>
+        /// Property user business logic
+        /// </summary>
+        /// <author>Oscar Julian Rojas</author>
         private readonly IUserBusinessLogic _userBusinessLogic;
 
+        /// <summary>
+        /// Constructor update user business logic 
+        /// </summary>
+        /// <author>Oscar Julian Rojas </author>
+        /// <date>21/03/20201</date>
+        /// <param name="userBusinessLogic">property user business logic</param>
         public Update(IUserBusinessLogic userBusinessLogic)
         {
             _userBusinessLogic = userBusinessLogic;
         }
 
+
+        /// <summary>
+        /// update business logic
+        /// </summary>
+        /// <param name="request">Request entity user</param>
+        /// <param name="cancellationToken">Cancellation token</param>
+        /// <returns>User updated</returns>
         [HttpPut("api/users")]
         [Consumes("application/json")]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]

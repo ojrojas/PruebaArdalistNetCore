@@ -11,16 +11,36 @@ using System.Threading.Tasks;
 
 namespace Api.Endpoints.User
 {
+    /// <summary>
+    /// Delete endpoint users
+    /// </summary>
+    /// <author>Oscar Julian Rojas</author>
     [Authorize]
     public class Delete : BaseAsyncEndpoint.WithRequest<UserDto>.WithResponse<Response<UserDto>>
     {
+        /// <summary>
+        /// Property user business logic
+        /// </summary>
+        /// <author>Oscar Julian Rojas</author>
         private readonly IUserBusinessLogic _userBusinessLogic;
 
+        /// <summary>
+        /// Constructor delete user business logic 
+        /// </summary>
+        /// <author>Oscar Julian Rojas </author>
+        /// <date>21/03/20201</date>
+        /// <param name="userBusinessLogic">property user business logic</param>
         public Delete(IUserBusinessLogic userBusinessLogic)
         {
             _userBusinessLogic = userBusinessLogic;
         }
 
+        /// <summary>
+        /// Delete business logic
+        /// </summary>
+        /// <param name="request">Request entity user</param>
+        /// <param name="cancellationToken">Cancellation token</param>
+        /// <returns>User created</returns>
         [HttpDelete("api/users")]
         [Consumes("application/json")]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]

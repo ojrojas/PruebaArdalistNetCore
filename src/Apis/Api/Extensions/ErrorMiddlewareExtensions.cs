@@ -71,7 +71,7 @@ namespace Application.Api.Extensions
         {
             context.Response.StatusCode = (int)GetErrorCode(exception);
             context.Response.ContentType = ApisConstants.ContentType;
-          
+
             var errorResponse = new ErrorResponseDto
             {
                 ErrorCode = context.Response.StatusCode,
@@ -82,11 +82,13 @@ namespace Application.Api.Extensions
                 ControllerName = (string)context.GetRouteData()?.Values[ApisConstants.ControllerName],
                 UserId = context.User.HasClaim(x => x.Value.Equals("Id")) ? context.User.FindFirst("Id").Value : string.Empty
             };
+
             _logger.LogInformation("Error application");
-            await context.Response.WriteAsync(JsonConvert.SerializeObject(new Response<ErrorResponseDto> { 
+            await context.Response.WriteAsync(JsonConvert.SerializeObject(new Response<ErrorResponseDto>
+            {
                 Data = errorResponse,
                 StatusCode = errorResponse.ErrorCode,
-                Success = errorResponse.ErrorCode != default ? false : true,
+                Success = errorResponse.ErrorCode == default,
                 Message = errorResponse.Message
             }));
         }
@@ -102,11 +104,12 @@ namespace Application.Api.Extensions
         {
             return e switch
             {
-                ValidationException _ => HttpStatusCode.BadRequest,
-                FormatException _ => HttpStatusCode.BadRequest,
-                AuthenticationException _ => HttpStatusCode.Forbidden,
-                NotImplementedException _ => HttpStatusCode.NotImplemented,
-                AccessViolationException _ => HttpStatusCode.Unauthorized,
+                ValidationException => HttpStatusCode.BadRequest,
+                FormatException => HttpStatusCode.BadRequest,
+                AuthenticationException => HttpStatusCode.Forbidden,
+                NotImplementedException => HttpStatusCode.NotImplemented,
+                AccessViolationException => HttpStatusCode.Unauthorized,
+                InvalidOperationException => HttpStatusCode.BadRequest,
                 _ => HttpStatusCode.InternalServerError,
             };
         }

@@ -4,6 +4,7 @@ using Application.Main;
 using Application.Repositories;
 using AutoMapper;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Application.Core
@@ -17,15 +18,19 @@ namespace Application.Core
         /// User repository
         /// </summary>
         private readonly IUserRepository _userRepository;
+        private readonly ITypeIdentificationRepository _typeIdentificationRepository;
         private readonly IEncryptedPassword _encriptedPassword;
         private readonly IMapper _mapper;
 
-        public UserBusinessLogic(IUserRepository userRepository, IEncryptedPassword encriptedPassword, IMapper mapper)
+        public UserBusinessLogic(IUserRepository userRepository, ITypeIdentificationRepository typeIdentificationRepository, IEncryptedPassword encriptedPassword, IMapper mapper)
         {
             _userRepository = userRepository;
+            _typeIdentificationRepository = typeIdentificationRepository;
             _encriptedPassword = encriptedPassword;
             _mapper = mapper;
         }
+
+
 
         /// <summary>
         /// Method create user
@@ -88,7 +93,16 @@ namespace Application.Core
         /// <returns>IEnumerable users </returns>
         public async Task<IEnumerable<UserDto>> GetAll()
         {
-            return this._mapper.Map<IEnumerable<UserDto>>(await this._userRepository.GetAllUser());
+            var users = await this._userRepository.GetAllUser();
+            var types = await this._typeIdentificationRepository.GetAll();
+            if (users.Any())
+            {
+                foreach(var i in users)
+                {
+                    i.TypeIdentification = types.Where(x => x.Id == i.TypeIdentificationId).FirstOrDefault();
+                }
+            }
+            return this._mapper.Map<IEnumerable<UserDto>>(users);
         }
 
         /// <summary>

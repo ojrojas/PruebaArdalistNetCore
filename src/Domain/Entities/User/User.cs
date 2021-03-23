@@ -15,7 +15,8 @@ namespace Application.Entities
         public string SurName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public string IdentificationType { get; set; }
+        public TypeIdentification TypeIdentification { get; set; }
+        public string TypeIdentificationId { get; set; }
         public string Identification { get; set; }
     }
 }
