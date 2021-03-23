@@ -19,8 +19,8 @@
         /// <summary>
         /// Query Update User
         /// </summary>
-        public const string UpdateUser = @"UPDATE Users SET Name=@Name, MiddleName=@MiddleName, LastName=@LastName, SurName=@SurName, Email=@Email, Password=@Password, 
-                                        CreatedOn=@CreatedOn, CreatedBy=@CreatedBy, ModifiedOn=@ModifiedOn, ModifiedBy=ModifiedBy, State=@State, 
+        public const string UpdateUser = @"UPDATE Users SET Name=@Name, MiddleName=@MiddleName, LastName=@LastName, SurName=@SurName, Email=@Email,  
+                                        CreatedOn=@CreatedOn, CreatedBy=@CreatedBy, ModifiedOn=@ModifiedOn, ModifiedBy=ModifiedBy,
                                         Identification=@Identification, TypeIdentificationId=@TypeIdentificationId  WHERE Id=@Id; select * from Users where Id=@Id";
         /// <summary>
         /// Query Update State
