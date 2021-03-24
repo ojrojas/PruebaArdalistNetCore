@@ -15,7 +15,7 @@ namespace Application.Repositories
     public abstract class GenerycRepository
     {
         private readonly IConfiguration _configuration;
-       
+
         /// <summary>
         /// Contructor GeneryRepository 
         /// </summary>
@@ -60,7 +60,7 @@ namespace Application.Repositories
         {
             using var connection = GetConnection(this._configuration.GetConnectionString("connection"));
             var cmd = new CommandDefinition(NameProcedureOrQueryString, null, null, null, typeCommand);
-             connection.Open();
+            connection.Open();
             if (parameters != null)
                 cmd = new CommandDefinition(NameProcedureOrQueryString, parameters, null, null, typeCommand);
             return await connection.QueryFirstOrDefaultAsync<TOutput>(cmd);

@@ -17,11 +17,12 @@ namespace Application.TestApi.Endpoints
     [Collection("Sequential")]
     public class Create : IClassFixture<ApiTestBuilding>
     {
-       JsonSerializerSettings _serializerSettings = new() {
-           ContractResolver = new CamelCasePropertyNamesContractResolver(),
-           DateTimeZoneHandling = DateTimeZoneHandling.Utc,
-           NullValueHandling = NullValueHandling.Ignore,
-       };
+        JsonSerializerSettings _serializerSettings = new()
+        {
+            ContractResolver = new CamelCasePropertyNamesContractResolver(),
+            DateTimeZoneHandling = DateTimeZoneHandling.Utc,
+            NullValueHandling = NullValueHandling.Ignore,
+        };
 
         public Create(ApiTestBuilding factory)
         {
@@ -67,7 +68,7 @@ namespace Application.TestApi.Endpoints
 
         private UserDto CreateNewUserTest()
         {
-            return  new UserDto()
+            return new UserDto()
             {
                 Id = Guid.NewGuid().ToString(),
                 Name = "Julian",

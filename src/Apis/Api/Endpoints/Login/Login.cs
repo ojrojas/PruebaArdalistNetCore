@@ -5,7 +5,6 @@ using Ardalis.ApiEndpoints;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -49,7 +48,8 @@ namespace Api.Endpoints.Login
           Tags = new[] { "LoginEndpoint" })]
         public override async Task<ActionResult<Response<string>>> HandleAsync(LoginDto request, CancellationToken cancellationToken = default)
         {
-            return new Response<string> {
+            return new Response<string>
+            {
                 Data = await this._userBusinessLogic.LoginUser(request),
                 StatusCode = HttpContext.Response.StatusCode
             };

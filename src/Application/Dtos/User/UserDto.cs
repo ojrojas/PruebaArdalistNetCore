@@ -17,7 +17,7 @@ namespace Application.Dtos
         [EmailAddress(ErrorMessage = "El formato de entrada debe ser un correo.")]
         public string Email { get; set; }
         [MaxLength(15, ErrorMessage = "El maximo permitido para el password es de 15 caracteres.")]
-        [MinLength( 8, ErrorMessage = "El minimo permitido para el password es de 8 caracteres")]
+        [MinLength(8, ErrorMessage = "El minimo permitido para el password es de 8 caracteres")]
         public string Password { get; set; }
         public TypeIdentificationDto TypeIdentification { get; set; }
         public string TypeIdentificationId { get; set; }

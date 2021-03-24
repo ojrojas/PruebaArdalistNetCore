@@ -34,14 +34,14 @@ namespace Application.Commons
                 return name;
         }
 
-       /// <summary>
-       /// Method builder query string for schemma database
-       /// </summary>
-       /// <param name="squema">specific schemma database</param>
-       /// <param name="NameProcedureOrQueryString">QueryString command</param>
-       /// <author>Oscar Julian Rojas Garces</author>
-       /// <date>20/03/2021</date>
-       /// <returns>schemmadatabase + querystring/returns>
+        /// <summary>
+        /// Method builder query string for schemma database
+        /// </summary>
+        /// <param name="squema">specific schemma database</param>
+        /// <param name="NameProcedureOrQueryString">QueryString command</param>
+        /// <author>Oscar Julian Rojas Garces</author>
+        /// <date>20/03/2021</date>
+        /// <returns>schemmadatabase + querystring/returns>
         public static string BuilderQueryString(EnumSchemas squema, string NameProcedureOrQueryString)
         {
             if (!string.IsNullOrEmpty(NameProcedureOrQueryString))

@@ -16,7 +16,7 @@ namespace Mappers.Application
             /// User, UserDto
             CreateMap<User, UserDto>();
             CreateMap<UserDto, User>();
-            
+
             /// TypeIdentification
             CreateMap<TypeIdentification, TypeIdentificationDto>();
             CreateMap<TypeIdentificationDto, TypeIdentification>();

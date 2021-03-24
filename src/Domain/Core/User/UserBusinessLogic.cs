@@ -97,7 +97,7 @@ namespace Application.Core
             var types = await this._typeIdentificationRepository.GetAll();
             if (users.Any())
             {
-                foreach(var i in users)
+                foreach (var i in users)
                 {
                     i.TypeIdentification = types.Where(x => x.Id == i.TypeIdentificationId).FirstOrDefault();
                 }
