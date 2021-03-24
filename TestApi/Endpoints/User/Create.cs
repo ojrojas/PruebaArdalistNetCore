@@ -1,7 +1,6 @@
 ﻿using Application.Application.TestApi;
 using Application.Commons;
 using Application.Dtos;
-using Application.TestApi;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
@@ -13,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace TestApi.Endpoints.User
+namespace Application.TestApi.Endpoints
 {
     [Collection("Sequential")]
     public class Create : IClassFixture<ApiTestBuilding>
