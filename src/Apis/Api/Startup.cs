@@ -11,7 +11,7 @@ namespace Application.Api
     /// <summary>
     /// StartUp Application
     /// <author>Oscar Julian Rojas Garces</author>
-    /// <date>20/03/2021</date>
+    /// <date>10/07/2021</date>
     /// </summary>
     public class Startup
     {
@@ -40,7 +40,7 @@ namespace Application.Api
             services.AddSwaggerGenDoc();
             /// Add Injections Services Application
             services.AddServiceInjection();
-            services.AddAutoMapper(typeof(UserMappersProfile), typeof(TypeIdentificationMappers));
+            services.AddAutoMapper(typeof(ApplicationMappersProfile));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

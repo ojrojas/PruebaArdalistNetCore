@@ -10,7 +10,7 @@ namespace Application.Api.Extensions
     /// Add Services applications repositories and business
     /// </summary>
     /// <author>Oscar Julian Rojas</author>
-    /// <date>20/03/2021</date>
+    /// <date>10/07/2021</date>
     internal static class DIApplication
     {
         /// <summary>
@@ -19,7 +19,7 @@ namespace Application.Api.Extensions
         /// <param name="services">instance services</param>
         /// <returns>services instace + services application</returns>
         /// <author>Oscar Julian Rojas</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         internal static IServiceCollection AddServiceInjection(this IServiceCollection services)
         {
             services.AddScoped<IEncryptedPassword, EncryptedPassword>();
@@ -30,6 +30,11 @@ namespace Application.Api.Extensions
 
             services.AddScoped<ITypeIdentificationRepository, TypeIdentificationRepository>();
             services.AddScoped<IIdentificationTypeBusinessLogic, IdentificationTypeBusinessLogic>();
+
+            services.AddScoped<ICardFailRepository, CardFailRepository>();
+
+
+            
 
             return services;
         }

@@ -4,7 +4,7 @@
     /// Login entity for repository
     /// </summary>
     /// <author>Oscar Julian Rojas</author>
-    /// <date>20/03/2021</date>
+    /// <date>10/07/2021</date>
     public class Login
     {
         public string Email { get; set; }

@@ -14,7 +14,7 @@ namespace Api.Endpoints.Login
     /// Endpoint Login 
     /// </summary>
     /// <author>Oscar Julian Rojas</author>
-    /// <date>20/03/2021</date>
+    /// <date>10/07/2021</date>
     public class Login : BaseAsyncEndpoint.WithRequest<LoginDto>.WithResponse<Response<string>>
     {
         /// <summary>
@@ -48,11 +48,7 @@ namespace Api.Endpoints.Login
           Tags = new[] { "LoginEndpoint" })]
         public override async Task<ActionResult<Response<string>>> HandleAsync(LoginDto request, CancellationToken cancellationToken = default)
         {
-            return new Response<string>
-            {
-                Data = await this._userBusinessLogic.LoginUser(request),
-                StatusCode = HttpContext.Response.StatusCode
-            };
+            return await this._userBusinessLogic.LoginUser(request);
         }
     }
 }

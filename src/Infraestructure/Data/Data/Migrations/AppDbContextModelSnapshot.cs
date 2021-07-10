@@ -3,16 +3,14 @@ using System;
 using Application.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Data.Migrations
+namespace Data.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210322030653_second")]
-    partial class second
+    partial class AppDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,7 +33,7 @@ namespace Data.Migrations
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("State")
@@ -63,9 +61,6 @@ namespace Data.Migrations
                     b.Property<string>("Identification")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("IdentificationType")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("LastName")
                         .HasColumnType("TEXT");
 
@@ -75,16 +70,14 @@ namespace Data.Migrations
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("MyProperty")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Password")
+                        .HasMaxLength(15)
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("State")
@@ -93,9 +86,51 @@ namespace Data.Migrations
                     b.Property<string>("SurName")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("TypeIdentificationId")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("TypeIdentificationId");
+
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Entities.CardsFails.CardFail", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Quantities")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("State")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CardFails");
+                });
+
+            modelBuilder.Entity("Application.Entities.User", b =>
+                {
+                    b.HasOne("Application.Entities.TypeIdentification", "TypeIdentification")
+                        .WithMany()
+                        .HasForeignKey("TypeIdentificationId");
+
+                    b.Navigation("TypeIdentification");
                 });
 #pragma warning restore 612, 618
         }

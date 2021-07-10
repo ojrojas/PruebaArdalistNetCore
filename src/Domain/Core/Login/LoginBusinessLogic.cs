@@ -1,4 +1,5 @@
-﻿using Application.Dtos;
+﻿using Application.Commons;
+using Application.Dtos;
 using Application.Entities;
 using Application.Main;
 using Application.Repositories;
@@ -23,13 +24,18 @@ namespace Application.Core
             _userRepository = userRepository;
         }
 
-        public async Task<string> LoginUser(LoginDto logindto)
+        public async Task<Response<string>> LoginUser(LoginDto logindto)
         {
-            logindto.Password = await this._encriptedPassword.GenerateEncryptedPasswordAsync(logindto.Password);
-            var user = this._mapper.Map<User>(logindto);
-            var found = await this._userRepository.SelectLoginUser(user);
-            if (found != null) return await this._tokenClaims.GetTokenAsync(this._mapper.Map<UserDto>(found));
-            return null;
+            var response = new Response<string>();
+            response.GetCorrelation();
+            logindto.Password = await _encriptedPassword.GenerateEncryptedPasswordAsync(logindto.Password);
+            var user = _mapper.Map<User>(logindto);
+            var found = await _userRepository.SelectLoginUser(user);
+            var result = await _tokenClaims.GetTokenAsync(this._mapper.Map<UserDto>(found));
+            response.Data = result;
+            response.ReturnMessage = result != null ? "Login exitoso" : "login fallido";
+
+            return response;
         }
     }
 }

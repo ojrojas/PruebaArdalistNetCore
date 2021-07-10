@@ -40,7 +40,7 @@ namespace Application.Commons
         /// <param name="squema">specific schemma database</param>
         /// <param name="NameProcedureOrQueryString">QueryString command</param>
         /// <author>Oscar Julian Rojas Garces</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         /// <returns>schemmadatabase + querystring/returns>
         public static string BuilderQueryString(EnumSchemas squema, string NameProcedureOrQueryString)
         {
@@ -63,7 +63,7 @@ namespace Application.Commons
         /// Enums schemas database 
         /// </summary>
         /// <author>Oscar Julian Rojas</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         public enum EnumSchemas
         {
             [Description("dbo")]

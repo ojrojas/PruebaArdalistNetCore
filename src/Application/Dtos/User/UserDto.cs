@@ -7,7 +7,7 @@ namespace Application.Dtos
     /// UserDto context https
     /// </summary>
     /// <author>Oscar Julian Rojas</author>
-    /// <date>20/03/2021</date>
+    /// <date>10/07/2021</date>
     public class UserDto : BaseEntity
     {
         public string Name { get; set; }

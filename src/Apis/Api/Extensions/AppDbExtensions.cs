@@ -9,7 +9,7 @@ namespace Application.Api.Extensions
     /// Extension AppDbContext database 
     /// </summary>
     /// <author>Oscar Julian Rojas </author>
-    /// <date>20/03/2021</date>
+    /// <date>10/07/2021</date>
     internal static class AppDbExtensions
     {
         /// <summary>
@@ -18,7 +18,7 @@ namespace Application.Api.Extensions
         /// <param name="services">instanse service application</param>
         /// <param name="configuration">configuration settings</param>
         /// <author>Oscar Julian Rojas</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         /// <returns>Configuration services</returns>
         internal static IServiceCollection AddAppDbContextDatabaseSqlite(this IServiceCollection services, IConfiguration configuration)
         {

@@ -52,11 +52,7 @@ namespace Api.Endpoints.User
          Tags = new[] { "UserEndpoint" })]
         public override async Task<ActionResult<Response<UserDto>>> HandleAsync(UserDto request, CancellationToken cancellationToken = default)
         {
-            return new Response<UserDto>
-            {
-                Data = await this._userBusinessLogic.Update(request),
-                StatusCode = HttpContext.Response.StatusCode
-            };
+            return await this._userBusinessLogic.Update(request);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using Application.Dtos;
+﻿using Application.Commons;
+using Application.Commons.Constants;
+using Application.Dtos;
 using Application.Entities;
 using Application.Main;
 using Application.Repositories;
@@ -30,20 +32,25 @@ namespace Application.Core
             _mapper = mapper;
         }
 
-
-
         /// <summary>
         /// Method create user
         /// </summary>
         /// <param name="userdto">User create</param>
         /// <author>Oscar Julian Rojas</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         /// <returns>User created</returns>
-        public async Task<UserDto> CreateUser(UserDto userdto)
+        public async Task<Response<UserDto>> CreateUser(UserDto userdto)
         {
+            var response = new Response<UserDto>();
+            response.GetCorrelation();
+
             userdto.Password = await this._encriptedPassword.GenerateEncryptedPasswordAsync(userdto.Password);
             var user = this._mapper.Map<User>(userdto);
-            return this._mapper.Map<UserDto>(await this._userRepository.CreateUser(user));
+            var result = await this._userRepository.CreateUser(user);
+            response.Data =  this._mapper.Map<UserDto>(result);
+            response.ReturnMessage = result != null ? ConstantesUsers.CreateUserOk : ConstantesUsers.CreateUserFailure;
+
+            return response;
         }
 
         /// <summary>
@@ -51,12 +58,20 @@ namespace Application.Core
         /// </summary>
         /// <param name="userdto">User to update</param>
         /// <author>Oscar Julian Rojas</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         /// <returns>User updated</returns>
-        public async Task<UserDto> Update(UserDto userdto)
+        public async Task<Response<UserDto>> Update(UserDto userdto)
         {
+            var response = new Response<UserDto>();
+            response.GetCorrelation();
+
+            userdto.Password = await this._encriptedPassword.GenerateEncryptedPasswordAsync(userdto.Password);
             var user = this._mapper.Map<User>(userdto);
-            return this._mapper.Map<UserDto>(await this._userRepository.UpdateUser(user));
+            var result = await this._userRepository.UpdateUser(user);
+            response.Data = this._mapper.Map<UserDto>(result);
+            response.ReturnMessage = result != null ? ConstantesUsers.UpdateUserOk : ConstantesUsers.UpdateUserFailure;
+
+            return response;
         }
 
         /// <summary>
@@ -64,12 +79,20 @@ namespace Application.Core
         /// </summary>
         /// <param name="userdto">User to update state</param>
         /// <author>Oscar Julian Rojas</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         /// <returns>User updated</returns>
-        public async Task<UserDto> UpdateState(UserDto userdto)
+        public async Task<Response<UserDto>> UpdateState(UserDto userdto)
         {
+            var response = new Response<UserDto>();
+            response.GetCorrelation();
+
+            userdto.Password = await this._encriptedPassword.GenerateEncryptedPasswordAsync(userdto.Password);
             var user = this._mapper.Map<User>(userdto);
-            return this._mapper.Map<UserDto>(await this._userRepository.UpdateStateUser(user));
+            var result = await this._userRepository.UpdateStateUser(user);
+            response.Data = this._mapper.Map<UserDto>(result);
+            response.ReturnMessage = result != null ? ConstantesUsers.UpdateUserOk : ConstantesUsers.UpdateUserFailure;
+
+            return response;
         }
 
         /// <summary>
@@ -77,22 +100,32 @@ namespace Application.Core
         /// </summary>
         /// <param name="userdto">User to delete</param>
         /// <author>Oscar Julian Rojas</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         /// <returns>User deleted</returns>
-        public async Task<UserDto> Delete(UserDto userdto)
+        public async Task<Response<UserDto>> Delete(UserDto userdto)
         {
+            var response = new Response<UserDto>();
+            response.GetCorrelation();
+
+            userdto.Password = await this._encriptedPassword.GenerateEncryptedPasswordAsync(userdto.Password);
             var user = this._mapper.Map<User>(userdto);
-            return this._mapper.Map<UserDto>(await this._userRepository.DeleteUser(user));
+            var result = await this._userRepository.DeleteUser(user);
+            response.Data = this._mapper.Map<UserDto>(result);
+            response.ReturnMessage = result != null ? ConstantesUsers.DeleteUserOk : ConstantesUsers.DeleteUserFailure;
+
+            return response;
         }
 
         /// <summary>
         /// Method getall users
         /// </summary>
         /// <author>Oscar Julian Rojas</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         /// <returns>IEnumerable users </returns>
-        public async Task<IEnumerable<UserDto>> GetAll()
+        public async Task<Response<IEnumerable<UserDto>>> GetAll()
         {
+            var response = new Response<IEnumerable<UserDto>>();
+            response.GetCorrelation();
             var users = await this._userRepository.GetAllUser();
             var types = await this._typeIdentificationRepository.GetAll();
             if (users.Any())
@@ -102,27 +135,35 @@ namespace Application.Core
                     i.TypeIdentification = types.Where(x => x.Id == i.TypeIdentificationId).FirstOrDefault();
                 }
             }
-            return this._mapper.Map<IEnumerable<UserDto>>(users);
+
+            response.Data = _mapper.Map<IEnumerable<UserDto>>(users);
+            response.ReturnMessage = users != null ? ConstantesUsers.GeteUserOk : ConstantesUsers.GetUserFailure;
+            return response;
         }
 
         /// <summary>
         /// Update Password getall users
         /// </summary>
         /// <author>Oscar Julian Rojas</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         /// <returns>IEnumerable users </returns>
-        public async Task<UserDto> UpdatePassword(UserDto userdto, string oldpassword)
+        public async Task<Response<UserDto>> UpdatePassword(UserDto userdto, string oldpassword)
         {
+            var response = new Response<UserDto>();
+            response.GetCorrelation();
+
             userdto.Password = await this._encriptedPassword.GenerateEncryptedPasswordAsync(userdto.Password);
             var user = this._mapper.Map<User>(userdto);
             var userSelected = await this._userRepository.SelectUpdatePassword(user, oldpassword);
+           
             if (userSelected.Password.Equals(userdto.Password))
             {
-                await this._userRepository.UpdatePassword(user);
-                return this._mapper.Map<UserDto>(user);
+                var result = _mapper.Map<UserDto>(await _userRepository.UpdatePassword(user));
+                response.Data = result;
+                response.ReturnMessage = result != null ? ConstantesUsers.GeteUserOk : ConstantesUsers.GetUserFailure;
             }
-
-            return null;
+          
+            return response;
         }
     }
 }

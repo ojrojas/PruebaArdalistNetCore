@@ -15,7 +15,7 @@ namespace Main.Tokens
     /// Implementation Generate Tokens
     /// </summary>
     /// <author>Oscar Julian Rojas Garces</author>
-    /// <date>20/03/2021</date>
+    /// <date>10/07/2021</date>
     public class TokenClaims : ITokenClaims
     {
         /// <summary>
@@ -28,7 +28,7 @@ namespace Main.Tokens
         /// </summary>
         /// <param name="configuration">Instancia de configuracion</param>
         /// <author>Oscar Julian Rojas Garces</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         public TokenClaims(IConfiguration configuration)
         {
             _configuration = configuration;

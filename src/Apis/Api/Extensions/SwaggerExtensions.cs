@@ -8,7 +8,7 @@ namespace Application.Api.Extensions
     /// SwaggerGen Configration services
     /// </summary>
     /// <author>Oscar Julian Rojas</author>
-    /// <date>20/03/2021</date>
+    /// <date>10/07/2021</date>
     internal static class SwaggerExtensions
     {
         internal static IServiceCollection AddSwaggerGenDoc(this IServiceCollection services)

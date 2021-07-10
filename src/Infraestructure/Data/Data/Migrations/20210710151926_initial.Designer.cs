@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Data.Migrations
+namespace Data.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210322052531_third")]
-    partial class third
+    [Migration("20210710151926_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,7 +35,7 @@ namespace Data.Migrations
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("State")
@@ -72,13 +72,14 @@ namespace Data.Migrations
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Password")
+                        .HasMaxLength(15)
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("State")
@@ -95,6 +96,34 @@ namespace Data.Migrations
                     b.HasIndex("TypeIdentificationId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Entities.CardsFails.CardFail", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Quantities")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("State")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CardFails");
                 });
 
             modelBuilder.Entity("Application.Entities.User", b =>

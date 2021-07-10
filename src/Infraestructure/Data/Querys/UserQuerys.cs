@@ -4,7 +4,7 @@
     /// UserQuerys database 
     /// </summary>
     /// <author>Oscar Julian Rojas</author>
-    /// <date>20/03/2021</date>
+    /// <date>10/07/2021</date>
     public static class UserQuerys
     {
         /// <summary>
@@ -12,10 +12,9 @@
         /// </summary>
         public const string CreateUser = @"INSERT INTO Users
                                         (Id, CreatedBy, CreatedOn, Email, Identification, TypeIdentificationId, LastName, MiddleName, 
-                                        ModifiedBy, ModifiedOn, Name, Password, State, SurName)
+                                        Name, Password, State, SurName)
                                         VALUES(@Id, @CreatedBy, @CreatedOn, @Email, @Identification, 
-                                        @TypeIdentificationId, @LastName, @MiddleName, @ModifiedBy, 
-                                        @ModifiedOn, @Name, @Password, @State, @SurName); select * from Users where Id=@Id";
+                                        @TypeIdentificationId, @LastName, @MiddleName,@Name, @Password, @State, @SurName); select * from Users where Id=@Id";
         /// <summary>
         /// Query Update User
         /// </summary>

@@ -53,11 +53,7 @@ namespace Api.Endpoints.User
          Tags = new[] { "UserEndpoint" })]
         public override async Task<ActionResult<Response<IEnumerable<UserDto>>>> HandleAsync(CancellationToken cancellationToken = default)
         {
-            return new Response<IEnumerable<UserDto>>
-            {
-                Data = await this._userBusinessLogic.GetAll(),
-                StatusCode = HttpContext.Response.StatusCode
-            };
+            return await this._userBusinessLogic.GetAll();
         }
     }
 }

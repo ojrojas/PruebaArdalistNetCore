@@ -51,11 +51,7 @@ namespace Api.Endpoints.TypeIdentification
          Tags = new[] { "TypeIdentificationEndpoints" })]
         public override async Task<ActionResult<Response<IEnumerable<TypeIdentificationDto>>>> HandleAsync(CancellationToken cancellationToken = default)
         {
-            return new Response<IEnumerable<TypeIdentificationDto>>
-            {
-                Data = await this._identificationTypeBusinessLogic.GetAll(),
-                StatusCode = HttpContext.Response.StatusCode
-            };
+            return await this._identificationTypeBusinessLogic.GetAll();
         }
     }
 }

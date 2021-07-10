@@ -8,7 +8,7 @@ namespace Application.Commons
     /// Extensions Enums Helpers
     /// </summary>
     /// <author>Oscar Julian Rojas</author>
-    /// <date>20/03/2021</date>
+    /// <date>10/07/2021</date>
     public static class HelpersEnums
     {
         /// <summary>
@@ -16,7 +16,7 @@ namespace Application.Commons
         /// </summary>
         /// <param name="enumValue">Value enum</param>
         /// <author>Oscar Julian Rojas</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         /// <returns>Description value enum</returns>
         public static string GetEnumDescription(Enum enumValue)
         {

@@ -17,7 +17,7 @@ namespace Application.Api.Extensions
     /// Errormiddleware manager error application
     /// </summary>
     /// <auhtor>Oscar Julian Rojas</auhtor>
-    /// <date>20/03/2021</date>
+    /// <date>10/07/2021</date>
     public class ErrorMiddlewareExtensions
     {
         /// <summary>
@@ -35,7 +35,7 @@ namespace Application.Api.Extensions
         /// <param name="requestDeletegate">request delegate </param>
         /// <param name="logger">log information</param>
         /// <author>Oscar Julian Rojas</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         public ErrorMiddlewareExtensions(RequestDelegate requestDeletegate, ILogger<ErrorMiddlewareExtensions> logger)
         {
             _requestDeletegate = requestDeletegate;
@@ -66,7 +66,7 @@ namespace Application.Api.Extensions
         /// <param name="context">Context application</param>
         /// <returns>Void</returns>
         /// <auhtor>Oscar Julian Rojas</auhtor>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         public async Task ErrorResult(Exception exception, HttpContext context)
         {
             context.Response.StatusCode = (int)GetErrorCode(exception);
@@ -87,9 +87,8 @@ namespace Application.Api.Extensions
             await context.Response.WriteAsync(JsonConvert.SerializeObject(new Response<ErrorResponseDto>
             {
                 Data = errorResponse,
-                StatusCode = errorResponse.ErrorCode,
-                Success = errorResponse.ErrorCode == default,
-                Message = errorResponse.Message
+                IsSuccess = errorResponse.ErrorCode == default,
+                ReturnMessage = errorResponse.Message
             }));
         }
 
@@ -99,7 +98,7 @@ namespace Application.Api.Extensions
         /// <param name="e">exception result</param>
         /// <returns>Status code application</returns>
         /// <author>Oscar Julian Rojas</author>
-        /// <date>20/03/2021</date>
+        /// <date>10/07/2021</date>
         private static HttpStatusCode GetErrorCode(Exception e)
         {
             return e switch

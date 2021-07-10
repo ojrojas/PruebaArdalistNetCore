@@ -4,7 +4,7 @@
     /// Constants Api 
     /// </summary>
     /// <author>Oscar Julian Rojas</author>
-    /// <date>20/03/2021</date>
+    /// <date>10/07/2021</date>
     public static class ApisConstants
     {
         public const string ContentType = "application/json";
